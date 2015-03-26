@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLFChatMessageInputView">
+            <connections>
+                <outlet property="inputContainer" destination="FTf-gB-Kk5" id="ZDi-6k-VO0"/>
+                <outlet property="leftContainer" destination="Aat-Zd-9b2" id="u8e-17-CtB"/>
+                <outlet property="rightContainer" destination="hlJ-i9-mwl" id="XAa-v9-3Mg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wk-Tg-h2q" userLabel="Separator">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0Gt-JY-lIo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aat-Zd-9b2" userLabel="LeftContainer">
+                    <rect key="frame" x="4" y="0.0" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="32d-d5-bii"/>
+                        <constraint firstAttribute="width" constant="44" id="IEu-rE-SSy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTf-gB-Kk5" userLabel="InputContainer">
+                    <rect key="frame" x="52" y="7" width="188" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ndB-Dt-yLa"/>
+                        <constraint firstAttribute="width" constant="60" id="nyn-LZ-5qg"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ndB-Dt-yLa"/>
+                            <exclude reference="nyn-LZ-5qg"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-i9-mwl" userLabel="RightContainer">
+                    <rect key="frame" x="244" y="0.0" width="72" height="44"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="DjI-p8-fzr"/>
+                        <constraint firstAttribute="height" constant="44" id="N8O-EW-ro9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hlJ-i9-mwl" secondAttribute="bottom" id="0ig-qF-TgA"/>
+                <constraint firstItem="Aat-Zd-9b2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="6Rx-Fe-9dc"/>
+                <constraint firstItem="hlJ-i9-mwl" firstAttribute="leading" secondItem="FTf-gB-Kk5" secondAttribute="trailing" constant="4" id="Aa9-1r-fi3"/>
+                <constraint firstAttribute="bottom" secondItem="FTf-gB-Kk5" secondAttribute="bottom" constant="7" id="Fei-k9-eNL"/>
+                <constraint firstItem="FTf-gB-Kk5" firstAttribute="top" secondItem="1wk-Tg-h2q" secondAttribute="bottom" constant="6" id="GZG-X2-qsn"/>
+                <constraint firstAttribute="trailing" secondItem="1wk-Tg-h2q" secondAttribute="trailing" id="KfN-F6-St4"/>
+                <constraint firstItem="1wk-Tg-h2q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PFv-by-o3Q"/>
+                <constraint firstAttribute="bottom" secondItem="Aat-Zd-9b2" secondAttribute="bottom" id="dRx-rP-Y6n"/>
+                <constraint firstItem="1wk-Tg-h2q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iGD-Y9-Gtx"/>
+                <constraint firstAttribute="trailing" secondItem="hlJ-i9-mwl" secondAttribute="trailing" constant="4" id="nOz-on-yaZ"/>
+                <constraint firstItem="FTf-gB-Kk5" firstAttribute="leading" secondItem="Aat-Zd-9b2" secondAttribute="trailing" constant="4" id="vMh-5u-LSo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="223" y="145"/>
+        </view>
+    </objects>
+</document>

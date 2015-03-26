@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CLFMediaItemCollectionCell" id="vfY-HP-RZF" customClass="CLFMediaItemCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBi-qm-uJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-Zk-1Nn" userLabel="Play view">
+                        <rect key="frame" x="15" y="15" width="38" height="38"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_icon" translatesAutoresizingMaskIntoConstraints="NO" id="aco-TQ-Lss">
+                                <rect key="frame" x="13" y="11" width="15" height="17"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="8Rl-3q-v0a"/>
+                            <constraint firstAttribute="centerX" secondItem="aco-TQ-Lss" secondAttribute="centerX" constant="-1" id="Z1Z-zo-nEx"/>
+                            <constraint firstAttribute="centerY" secondItem="aco-TQ-Lss" secondAttribute="centerY" id="hsw-ui-Xlc"/>
+                            <constraint firstAttribute="height" constant="38" id="qSF-8p-4K0"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-ID-sdu">
+                        <rect key="frame" x="5" y="52" width="25" height="14"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljt-AR-msH" customClass="CLFSelectionView">
+                        <rect key="frame" x="4" y="42" width="22" height="22"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="Jf0-na-abU"/>
+                            <constraint firstAttribute="height" constant="22" id="ruM-cd-hDn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="kYW-Zk-1Nn" secondAttribute="centerX" id="0TY-1k-Hjr"/>
+                <constraint firstItem="QBi-qm-uJ8" firstAttribute="top" secondItem="vfY-HP-RZF" secondAttribute="top" id="63A-EQ-uA6"/>
+                <constraint firstAttribute="centerY" secondItem="kYW-Zk-1Nn" secondAttribute="centerY" id="7mA-Iq-fh6"/>
+                <constraint firstItem="Ljt-AR-msH" firstAttribute="leading" secondItem="vfY-HP-RZF" secondAttribute="leading" constant="4" id="8dM-hB-Exb"/>
+                <constraint firstAttribute="bottom" secondItem="L8G-ID-sdu" secondAttribute="bottom" constant="2" id="H8F-sN-vcU"/>
+                <constraint firstAttribute="bottom" secondItem="Ljt-AR-msH" secondAttribute="bottom" constant="4" id="cES-8x-pTM"/>
+                <constraint firstItem="QBi-qm-uJ8" firstAttribute="leading" secondItem="vfY-HP-RZF" secondAttribute="leading" id="e5u-15-18U"/>
+                <constraint firstItem="L8G-ID-sdu" firstAttribute="leading" secondItem="vfY-HP-RZF" secondAttribute="leading" constant="5" id="h94-ss-ET4"/>
+                <constraint firstAttribute="bottom" secondItem="QBi-qm-uJ8" secondAttribute="bottom" id="oUY-DX-IJz"/>
+                <constraint firstAttribute="trailing" secondItem="QBi-qm-uJ8" secondAttribute="trailing" id="uwb-Xh-HWT"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImageView" destination="QBi-qm-uJ8" id="5cQ-oc-203"/>
+                <outlet property="playView" destination="kYW-Zk-1Nn" id="GnI-3p-f5D"/>
+                <outlet property="selectionView" destination="Ljt-AR-msH" id="SRL-FQ-WiC"/>
+                <outlet property="timeLabel" destination="L8G-ID-sdu" id="IAm-e0-Afu"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play_icon" width="15" height="17"/>
+    </resources>
+</document>

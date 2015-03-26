@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CLFContactsSectionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAMILY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-JQ-ieA">
+                    <rect key="frame" x="8" y="3" width="304" height="20.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdT-UD-Uue">
+                    <rect key="frame" x="237" y="0.0" width="75" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="14" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="EDIT GROUP">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="editGroupButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="oGT-86-WTX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="YdT-UD-Uue" secondAttribute="centerY" id="3Og-24-d15"/>
+                <constraint firstItem="YdT-UD-Uue" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="8" id="5dG-zS-CrO"/>
+                <constraint firstAttribute="bottom" secondItem="YdT-UD-Uue" secondAttribute="bottom" id="8Zr-f4-69l"/>
+                <constraint firstAttribute="bottom" secondItem="qcv-JQ-ieA" secondAttribute="bottom" id="Htn-sx-0JF"/>
+                <constraint firstAttribute="trailing" secondItem="YdT-UD-Uue" secondAttribute="trailing" constant="8" id="NQ2-2Z-3vx"/>
+                <constraint firstAttribute="trailing" secondItem="YdT-UD-Uue" secondAttribute="trailing" constant="8" id="QQG-rW-j6p"/>
+                <constraint firstItem="YdT-UD-Uue" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xgl-Z4-kQh"/>
+                <constraint firstItem="YdT-UD-Uue" firstAttribute="leading" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="8" id="YmL-at-w4h"/>
+                <constraint firstAttribute="trailing" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="108" id="cBT-4d-5sx"/>
+                <constraint firstAttribute="bottom" secondItem="YdT-UD-Uue" secondAttribute="bottom" id="ce8-he-qBs"/>
+                <constraint firstItem="YdT-UD-Uue" firstAttribute="leading" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="8" id="eHs-GW-KCC"/>
+                <constraint firstAttribute="trailing" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="108" id="h0M-26-L20"/>
+                <constraint firstItem="qcv-JQ-ieA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="lfv-sh-UP5"/>
+                <constraint firstAttribute="trailing" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="8" id="scA-uz-bqa"/>
+                <constraint firstItem="YdT-UD-Uue" firstAttribute="leading" secondItem="qcv-JQ-ieA" secondAttribute="trailing" constant="170" id="yIu-7P-kOi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="cBT-4d-5sx"/>
+                    <exclude reference="h0M-26-L20"/>
+                    <exclude reference="3Og-24-d15"/>
+                    <exclude reference="5dG-zS-CrO"/>
+                    <exclude reference="8Zr-f4-69l"/>
+                    <exclude reference="QQG-rW-j6p"/>
+                    <exclude reference="YmL-at-w4h"/>
+                    <exclude reference="eHs-GW-KCC"/>
+                    <exclude reference="yIu-7P-kOi"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="editGroupButton" destination="YdT-UD-Uue" id="7ty-ta-gcj"/>
+                <outlet property="titleLabel" destination="qcv-JQ-ieA" id="B78-Bv-xCS"/>
+                <outlet property="titleTrailingContraint" destination="scA-uz-bqa" id="S6q-oF-S7m"/>
+            </connections>
+            <point key="canvasLocation" x="-238" y="-114"/>
+        </view>
+    </objects>
+</document>

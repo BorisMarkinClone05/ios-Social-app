@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CLFSharedPhotosAlbumCell" id="Tdm-YV-v3W" customClass="CLFSharedPhotosAlbumCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TbG-0i-hwV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9F-1G-vAR" customClass="CLFGradientView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6b-SU-TBI" userLabel="Album name label">
+                        <rect key="frame" x="135" y="37" width="51" height="28"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-gL-U7l" userLabel="Contact view" customClass="CLFContactsView">
+                        <rect key="frame" x="138" y="71" width="44" height="44"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="QXa-Ao-5aR"/>
+                            <constraint firstAttribute="height" constant="44" id="hum-bg-m3g"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zm-ew-SgG" userLabel="Date label">
+                        <rect key="frame" x="148" y="120" width="25" height="14"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FI-98-dEi" userLabel="Number  of photo view">
+                        <rect key="frame" x="143" y="144" width="35" height="15"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-pT-0Xl">
+                                <rect key="frame" x="5" y="2" width="25" height="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="24c-p0-CIK"/>
+                            <constraint firstItem="Lfq-pT-0Xl" firstAttribute="leading" secondItem="2FI-98-dEi" secondAttribute="leading" constant="5" id="USW-L0-KOn"/>
+                            <constraint firstAttribute="centerY" secondItem="Lfq-pT-0Xl" secondAttribute="centerY" id="WLz-hN-KoX"/>
+                            <constraint firstAttribute="trailing" secondItem="Lfq-pT-0Xl" secondAttribute="trailing" constant="5" id="q8G-Ub-mBz"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im0-fY-T3y" userLabel="Delete button">
+                        <rect key="frame" x="291" y="10" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="LD0-FJ-4KU"/>
+                            <constraint firstAttribute="width" constant="22" id="ZPs-C5-xcr"/>
+                        </constraints>
+                        <state key="normal" image="deleteIcon">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButtonTapped:" destination="Tdm-YV-v3W" eventType="touchUpInside" id="MU4-A0-RbZ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TbG-0i-hwV" secondAttribute="bottom" id="1in-Vj-ymu"/>
+                <constraint firstAttribute="centerX" secondItem="5zm-ew-SgG" secondAttribute="centerX" id="4bR-3Z-CNC"/>
+                <constraint firstItem="Im0-fY-T3y" firstAttribute="top" secondItem="Tdm-YV-v3W" secondAttribute="top" constant="10" id="6QJ-e7-cqD"/>
+                <constraint firstItem="p9F-1G-vAR" firstAttribute="top" secondItem="Tdm-YV-v3W" secondAttribute="top" id="ElG-El-hlk"/>
+                <constraint firstItem="TbG-0i-hwV" firstAttribute="top" secondItem="Tdm-YV-v3W" secondAttribute="top" id="Gtf-4n-cme"/>
+                <constraint firstAttribute="centerX" secondItem="k6b-SU-TBI" secondAttribute="centerX" id="M48-SZ-5JK"/>
+                <constraint firstAttribute="trailing" secondItem="TbG-0i-hwV" secondAttribute="trailing" id="Mc6-lQ-wLw"/>
+                <constraint firstAttribute="trailing" secondItem="p9F-1G-vAR" secondAttribute="trailing" id="Qlq-wU-h4U"/>
+                <constraint firstAttribute="bottom" secondItem="5zm-ew-SgG" secondAttribute="bottom" constant="51" id="Whd-mn-2zr"/>
+                <constraint firstAttribute="bottom" secondItem="2FI-98-dEi" secondAttribute="bottom" constant="26" id="YUA-bc-nlx"/>
+                <constraint firstAttribute="centerX" secondItem="2FI-98-dEi" secondAttribute="centerX" id="Ys8-Hx-kH2"/>
+                <constraint firstAttribute="bottom" secondItem="p9F-1G-vAR" secondAttribute="bottom" id="bRW-qS-7dT"/>
+                <constraint firstAttribute="centerX" secondItem="TI8-gL-U7l" secondAttribute="centerX" id="dOc-B6-cg4"/>
+                <constraint firstAttribute="centerY" secondItem="TI8-gL-U7l" secondAttribute="centerY" id="iek-m0-gYA"/>
+                <constraint firstItem="TbG-0i-hwV" firstAttribute="leading" secondItem="Tdm-YV-v3W" secondAttribute="leading" id="ldg-R3-Lzc"/>
+                <constraint firstItem="p9F-1G-vAR" firstAttribute="leading" secondItem="Tdm-YV-v3W" secondAttribute="leading" id="sF8-LP-RHS"/>
+                <constraint firstAttribute="trailing" secondItem="Im0-fY-T3y" secondAttribute="trailing" constant="7" id="vdD-WQ-HoJ"/>
+                <constraint firstItem="k6b-SU-TBI" firstAttribute="top" secondItem="Tdm-YV-v3W" secondAttribute="top" constant="37" id="vyh-7q-QoT"/>
+            </constraints>
+            <connections>
+                <outlet property="albumNameLabel" destination="k6b-SU-TBI" id="msR-L1-VnL"/>
+                <outlet property="backgroundImageView" destination="TbG-0i-hwV" id="OIy-aF-f9K"/>
+                <outlet property="contactView" destination="TI8-gL-U7l" id="SOd-aI-66S"/>
+                <outlet property="dateLabel" destination="5zm-ew-SgG" id="OuQ-1i-yVF"/>
+                <outlet property="deleteButton" destination="Im0-fY-T3y" id="sLv-vG-4ro"/>
+                <outlet property="gradientView" destination="p9F-1G-vAR" id="U8i-Qm-Rcm"/>
+                <outlet property="numberOfPhotosLabel" destination="Lfq-pT-0Xl" id="ppi-0b-D51"/>
+                <outlet property="numberOfPhotosView" destination="2FI-98-dEi" id="CqR-Vi-Q4g"/>
+            </connections>
+            <point key="canvasLocation" x="350" y="286.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="deleteIcon" width="22" height="22"/>
+    </resources>
+</document>

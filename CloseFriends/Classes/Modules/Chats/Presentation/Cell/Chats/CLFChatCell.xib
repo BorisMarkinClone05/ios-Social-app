@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CLFChatCell" rowHeight="64" id="gir-sY-WzE" customClass="CLFChatCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gir-sY-WzE" id="5JH-Wb-Z4D">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-G0-aZ5" userLabel="Avatar" customClass="CLFContactAvatarView">
+                        <rect key="frame" x="8" y="9" width="44" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="6pP-pe-Xtp"/>
+                            <constraint firstAttribute="height" constant="44" id="yrx-Hb-sPT"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-LY-7uU">
+                        <rect key="frame" x="62" y="15" width="226" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vK-75-bZc">
+                        <rect key="frame" x="62" y="30" width="226" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Jk7-Sa-VXd">
+                        <rect key="frame" x="296" y="26" width="8" height="13"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="9wl-1I-eBP"/>
+                            <constraint firstAttribute="width" constant="8" id="idc-bS-vf0"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="3vK-75-bZc" secondAttribute="trailing" constant="32" id="ANY-lC-mj6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Jk7-Sa-VXd" secondAttribute="trailing" constant="8" id="CVB-yX-iFF"/>
+                    <constraint firstItem="ogy-LY-7uU" firstAttribute="leading" secondItem="O0p-G0-aZ5" secondAttribute="trailing" constant="10" id="GQf-Nl-c5N"/>
+                    <constraint firstAttribute="centerY" secondItem="Jk7-Sa-VXd" secondAttribute="centerY" id="KdB-Td-x19"/>
+                    <constraint firstAttribute="centerY" secondItem="O0p-G0-aZ5" secondAttribute="centerY" id="LXj-y7-LRW"/>
+                    <constraint firstAttribute="trailing" secondItem="ogy-LY-7uU" secondAttribute="trailing" constant="32" id="LlS-cf-dyr"/>
+                    <constraint firstAttribute="bottom" secondItem="3vK-75-bZc" secondAttribute="bottom" constant="13" id="O9T-X9-1qQ"/>
+                    <constraint firstItem="3vK-75-bZc" firstAttribute="leading" secondItem="O0p-G0-aZ5" secondAttribute="trailing" constant="10" id="RnR-XA-jwE"/>
+                    <constraint firstItem="ogy-LY-7uU" firstAttribute="top" secondItem="5JH-Wb-Z4D" secondAttribute="top" constant="15" id="byt-6h-RRS"/>
+                    <constraint firstItem="O0p-G0-aZ5" firstAttribute="leading" secondItem="5JH-Wb-Z4D" secondAttribute="leading" constant="8" id="sHu-sd-LJO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="avatar" destination="O0p-G0-aZ5" id="X7q-KJ-oEs"/>
+                <outlet property="chevron" destination="Jk7-Sa-VXd" id="1FJ-jk-JgK"/>
+                <outlet property="contactNameLabel" destination="ogy-LY-7uU" id="29y-cx-U5S"/>
+                <outlet property="lastMessageLabel" destination="3vK-75-bZc" id="KwT-Am-CLH"/>
+            </connections>
+            <point key="canvasLocation" x="117" y="35"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron" width="8" height="13"/>
+    </resources>
+</document>

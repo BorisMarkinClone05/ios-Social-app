@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A5U-vi-1oO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dTq-TX-23g">
+            <objects>
+                <navigationController storyboardIdentifier="Chats Navigation" id="A5U-vi-1oO" customClass="CLFNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FWs-lg-0T5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="woD-MW-raH" kind="relationship" relationship="rootViewController" id="rNA-Lk-h7R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndV-yT-o4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="339"/>
+        </scene>
+        <!--Chats View Controller-->
+        <scene sceneID="3C8-Kg-Wi7">
+            <objects>
+                <viewController id="woD-MW-raH" customClass="CLFChatsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vQg-EK-ZPu"/>
+                        <viewControllerLayoutGuide type="bottom" id="zpw-wW-PCq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nTy-9L-CbA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PNT-dk-Bdj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zpw-wW-PCq" firstAttribute="top" secondItem="PNT-dk-Bdj" secondAttribute="bottom" id="Ea8-Or-Nk0"/>
+                            <constraint firstItem="PNT-dk-Bdj" firstAttribute="leading" secondItem="nTy-9L-CbA" secondAttribute="leading" id="Eqz-VD-ec6"/>
+                            <constraint firstItem="PNT-dk-Bdj" firstAttribute="top" secondItem="nTy-9L-CbA" secondAttribute="top" id="Wch-n6-8Sh"/>
+                            <constraint firstAttribute="trailing" secondItem="PNT-dk-Bdj" secondAttribute="trailing" id="gL0-xb-dM5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3rN-7F-jyG"/>
+                    <connections>
+                        <outlet property="chatsTable" destination="PNT-dk-Bdj" id="wd5-3A-2xM"/>
+                        <segue destination="eqt-eI-QPR" kind="show" identifier="Show Chat" id="wsN-lJ-ke5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdd-fG-H9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="339"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="j0g-rf-fhb">
+            <objects>
+                <viewController id="eqt-eI-QPR" customClass="CLFChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kBG-On-kG6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ixv-xP-sOr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wDF-T4-rtV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-p6-AjD" customClass="CLFChatMessageInputView">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nbg-p6-AjD" secondAttribute="bottom" id="34l-Bw-QiT"/>
+                            <constraint firstAttribute="trailing" secondItem="nbg-p6-AjD" secondAttribute="trailing" id="Vaw-3a-vsW"/>
+                            <constraint firstItem="ixv-xP-sOr" firstAttribute="top" secondItem="nbg-p6-AjD" secondAttribute="bottom" id="lRP-cV-zB7"/>
+                            <constraint firstItem="nbg-p6-AjD" firstAttribute="leading" secondItem="wDF-T4-rtV" secondAttribute="leading" id="yym-Tz-uOS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lRP-cV-zB7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="messageInputBottomLayoutGuide" destination="34l-Bw-QiT" id="8TW-io-F1c"/>
+                        <outlet property="messageInputView" destination="nbg-p6-AjD" id="uOU-XT-V0k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yae-6i-CKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="339"/>
+        </scene>
+    </scenes>
+</document>

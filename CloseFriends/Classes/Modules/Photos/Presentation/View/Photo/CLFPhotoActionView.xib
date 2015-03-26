@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLFPhotoActionView">
+            <connections>
+                <outlet property="commentButton" destination="Mrt-Cp-fpp" id="GAh-kl-aai"/>
+                <outlet property="contactsView" destination="mfB-3K-4Ra" id="D58-9g-ZAX"/>
+                <outlet property="likeButton" destination="793-cx-evj" id="TIV-Qt-uqY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVb-aN-zBA" userLabel="Separator">
+                    <rect key="frame" x="16" y="0.0" width="288" height="1"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Ih0-AQ-NPc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfB-3K-4Ra" customClass="CLFContactsView">
+                    <rect key="frame" x="16" y="3" width="188" height="44"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Bqw-g0-SBY"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="793-cx-evj" userLabel="LikeButton">
+                    <rect key="frame" x="220" y="3" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="EQV-3n-3YO"/>
+                        <constraint firstAttribute="height" constant="44" id="zEz-9z-M6U"/>
+                    </constraints>
+                    <state key="normal" image="likeIcon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-Cp-fpp" userLabel="CommentButton">
+                    <rect key="frame" x="268" y="3" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="QW5-CS-hlu"/>
+                        <constraint firstAttribute="width" constant="44" id="Qhz-Kt-P0i"/>
+                    </constraints>
+                    <state key="normal" image="commentIcon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.16862745100000001" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mfB-3K-4Ra" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="4zh-JB-iQl"/>
+                <constraint firstItem="Mrt-Cp-fpp" firstAttribute="leading" secondItem="793-cx-evj" secondAttribute="trailing" constant="4" id="FW9-vX-wj1"/>
+                <constraint firstItem="Mrt-Cp-fpp" firstAttribute="top" secondItem="pVb-aN-zBA" secondAttribute="bottom" constant="3" id="IIf-Bn-cQH"/>
+                <constraint firstItem="793-cx-evj" firstAttribute="top" secondItem="pVb-aN-zBA" secondAttribute="bottom" id="Ub4-TI-WKc"/>
+                <constraint firstItem="pVb-aN-zBA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Wd6-eB-MrN"/>
+                <constraint firstAttribute="centerY" secondItem="mfB-3K-4Ra" secondAttribute="centerY" id="cS4-zX-Rs1"/>
+                <constraint firstAttribute="trailing" secondItem="Mrt-Cp-fpp" secondAttribute="trailing" constant="8" id="eBl-mi-YYn"/>
+                <constraint firstItem="793-cx-evj" firstAttribute="leading" secondItem="mfB-3K-4Ra" secondAttribute="trailing" constant="16" id="eC0-ij-mEv"/>
+                <constraint firstItem="pVb-aN-zBA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fM4-gr-Kia"/>
+                <constraint firstAttribute="centerY" secondItem="Mrt-Cp-fpp" secondAttribute="centerY" id="ffJ-17-Unf"/>
+                <constraint firstAttribute="centerY" secondItem="793-cx-evj" secondAttribute="centerY" id="kJn-qJ-sNN"/>
+                <constraint firstItem="mfB-3K-4Ra" firstAttribute="top" secondItem="pVb-aN-zBA" secondAttribute="bottom" constant="3" id="lyN-5W-DNp"/>
+                <constraint firstAttribute="trailing" secondItem="pVb-aN-zBA" secondAttribute="trailing" constant="16" id="mdf-26-qe9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="lyN-5W-DNp"/>
+                    <exclude reference="Ub4-TI-WKc"/>
+                    <exclude reference="IIf-Bn-cQH"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="219" y="229"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="commentIcon" width="30" height="30"/>
+        <image name="likeIcon" width="30" height="30"/>
+    </resources>
+</document>

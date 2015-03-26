@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AppDelegate createXMPPAccount]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "xmppStream.myJID.user">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CLFChatViewController handleKeyboardShowHideNotificationWithUserInfo:]:CLFChatViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.messageInputBottomLayoutGuide.constant">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CLFChatViewController handleKeyboardShowHideNotification:]:CLFChatViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.messageInputBottomLayoutGuide.constant">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate createJidAccount]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate goOnline]:AppDelegate.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
